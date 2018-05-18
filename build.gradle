@@ -10,10 +10,10 @@ import java.text.SimpleDateFormat;
 
 // Git plugin details at https://github.com/ajoberstar/gradle-git
 import org.ajoberstar.gradle.git.tasks.*
-import org.reflections.Reflections;
-import org.reflections.scanners.SubTypesScanner;
-import org.reflections.scanners.TypeAnnotationsScanner;
-import org.reflections.util.ConfigurationBuilder;
+import org.reflections.Reflections
+import org.reflections.scanners.SubTypesScanner
+import org.reflections.scanners.TypeAnnotationsScanner
+import org.reflections.util.ConfigurationBuilder
 
 // Dependencies needed for what our Gradle scripts themselves use. It cannot be included via an external Gradle file :-(
 buildscript {
@@ -33,7 +33,7 @@ buildscript {
         // Needed for caching reflected data during builds
         classpath 'org.reflections:reflections:0.9.10'
         classpath 'dom4j:dom4j:1.6.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.10"
     }
 }
 
@@ -42,7 +42,7 @@ ext {
     env = System.getenv()
 }
 
-def moduleDepends = [];
+def moduleDepends = []
 def moduleFile = file('module.txt')
 
 // The module file should always exist if the module was correctly created or cloned using Gradle
